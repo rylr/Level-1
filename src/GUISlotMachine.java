@@ -48,6 +48,8 @@ public class GUISlotMachine implements ActionListener
 		bet = new JTextField(10);
 		panel.add(bet);
 		bet.setBounds(50, 10, 30, 20);
+		int betCash = bet.getText(Integer.parseInt(""));
+		//betCash = Integer.parseInt(bet.getText());
 		
 		spin = new JButton("Spin");
 		panel.add(spin);
@@ -76,7 +78,14 @@ public class GUISlotMachine implements ActionListener
 	{
 		if(e.getSource()==spin)
 		{
-			betCash = Integer.parseInt(bet.getText());
+			totalCash - betCash;
+			one.setText(Random.nextInt(2) + 1);
+			two.setText(Random.nextInt(2) + 1);
+			three.setText(Random.nextInt(2) + 1);
+			
+			if(one == two && two == three){
+				totalCash + betCash * 10;
+			}
 		}
 	}
 }
