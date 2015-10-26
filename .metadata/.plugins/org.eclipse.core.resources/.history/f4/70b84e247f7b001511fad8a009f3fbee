@@ -1,0 +1,45 @@
+import javax.swing.JFrame;
+
+import org.jointheleague.graphical.robot.Robot;
+
+public class Face {
+	JFrame frame;
+	public static void main(String[] args) {
+		
+		Face r = new Face();
+	}
+	
+	Face(){
+		Robot tyler = new Robot();
+		
+		head(tyler);
+		eyes(tyler);
+		nose(tyler);
+		mouth(tyler);
+		
+	}
+	
+	public void head(Robot a){
+		a.setX(960);
+		a.setY(800);
+		a.setSpeed(10);
+		
+		for(int i = 0; i <= 360; i++){
+			a.move(3);
+			a.turn(1);
+		}
+		
+	}
+	
+	public void eyes(Robot b){
+		
+	}
+
+	public void nose(Robot c){
+	
+	}
+	
+	public void mouth(Robot d){
+		
+	}
+}
